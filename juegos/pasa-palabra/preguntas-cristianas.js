@@ -1,0 +1,31 @@
+// Preguntas Cristianas para el Juego de Pasa-Palabra
+// Este archivo contiene preguntas relacionadas con temas cristianos y bíblicos
+
+export const preguntasCristianas = [
+    { letra: 'A', pregunta: 'Empieza con A: Primer libro de la Biblia.', respuesta: 'génesis' },
+    { letra: 'B', pregunta: 'Empieza con B: Libro sagrado de los cristianos.', respuesta: 'biblia' },
+    { letra: 'C', pregunta: 'Empieza con C: Lugar donde se reúnen los cristianos.', respuesta: 'iglesia' },
+    { letra: 'D', pregunta: 'Empieza con D: Uno de los doce seguidores de Jesús.', respuesta: 'discípulo' },
+    { letra: 'E', pregunta: 'Empieza con E: Persona que predica la palabra de Dios.', respuesta: 'evangelista' },
+    { letra: 'F', pregunta: 'Empieza con F: Confianza en Dios y sus promesas.', respuesta: 'fe' },
+    { letra: 'G', pregunta: 'Empieza con G: Regalo de Dios a la humanidad.', respuesta: 'gracia' },
+    { letra: 'H', pregunta: 'Empieza con H: Lugar donde nació Jesús.', respuesta: 'belén' },
+    { letra: 'I', pregunta: 'Empieza con I: Lugar donde se reúnen los cristianos.', respuesta: 'iglesia' },
+    { letra: 'J', pregunta: 'Empieza con J: Hijo de Dios y Salvador.', respuesta: 'jesús' },
+    { letra: 'K', pregunta: 'Contiene K: Rey que gobernó Israel.', respuesta: 'rey' },
+    { letra: 'L', pregunta: 'Empieza con L: Lugar donde Jesús fue crucificado.', respuesta: 'calvario' },
+    { letra: 'M', pregunta: 'Empieza con M: Madre de Jesús.', respuesta: 'maría' },
+    { letra: 'N', pregunta: 'Empieza con N: Lugar donde Jesús nació.', respuesta: 'belén' },
+    { letra: 'O', pregunta: 'Empieza con O: Comunicación con Dios.', respuesta: 'oración' },
+    { letra: 'P', pregunta: 'Empieza con P: Líder espiritual de una iglesia.', respuesta: 'pastor' },
+    { letra: 'Q', pregunta: 'Empieza con Q: Pregunta que se hace a Dios.', respuesta: 'pregunta' },
+    { letra: 'R', pregunta: 'Empieza con R: Volver a nacer espiritualmente.', respuesta: 'renacer' },
+    { letra: 'S', pregunta: 'Empieza con S: Persona que salva a otros.', respuesta: 'salvador' },
+    { letra: 'T', pregunta: 'Empieza con T: Enseñanza de Jesús.', respuesta: 'verdad' },
+    { letra: 'U', pregunta: 'Empieza con U: Último libro de la Biblia.', respuesta: 'apocalipsis' },
+    { letra: 'V', pregunta: 'Empieza con V: Camino que lleva a Dios.', respuesta: 'vida' },
+    { letra: 'W', pregunta: 'Contiene W: Palabra de Dios.', respuesta: 'palabra' },
+    { letra: 'X', pregunta: 'Contiene X: Símbolo de la cruz.', respuesta: 'cruz' },
+    { letra: 'Y', pregunta: 'Empieza con Y: Lugar donde Jesús fue sepultado.', respuesta: 'tumba' },
+    { letra: 'Z', pregunta: 'Empieza con Z: Lugar donde Jesús resucitó.', respuesta: 'tumba' },
+]; 

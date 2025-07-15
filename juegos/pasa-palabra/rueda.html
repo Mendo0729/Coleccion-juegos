@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rueda Alfabética - Juegos Interactivos</title>
+
+    <script type="module" src="/components/tailwind-config.js"></script>
+
+    <style>
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .letra-rueda {
+            transition: all 0.3s ease;
+        }
+
+        .letra-rueda:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-honey text-chocolate font-sans">
+
+    <main class="max-w-4xl mx-auto p-6 mt-10">
+        <h1 class="text-3xl font-bold text-center mb-4">🔠 Rueda Alfabética</h1>
+        <p class="text-center text-chocolate/80 mb-6">Responde preguntas con cada letra del abecedario. ¡Tienes 5
+            minutos para completar toda la rueda!</p>
+
+        <!-- Pantalla de selección de categoría -->
+        <div id="pantalla-seleccion" class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-chocolate mb-6">Elige una categoría para comenzar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 border-2 border-coral/20 hover:border-coral transition-all cursor-pointer"
+                    data-categoria="general" id="categoria-general">
+                    <h3 class="text-xl font-bold text-chocolate mb-3">📚 General</h3>
+                    <p class="text-chocolate/70 mb-4">Preguntas de conocimiento general sobre ciencia, geografía,
+                        tecnología y cultura.</p>
+                    <div class="text-sm text-chocolate/60">
+                        <p>• Temas variados y accesibles</p>
+                        <p>• Conocimiento universal</p>
+                        <p>• Para todas las edades</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border-2 border-coral/20 hover:border-coral transition-all cursor-pointer"
+                    data-categoria="cristiana" id="categoria-cristiana">
+                    <h3 class="text-xl font-bold text-chocolate mb-3">🙏 Cristiana</h3>
+                    <p class="text-chocolate/70 mb-4">Preguntas relacionadas con la Biblia, temas cristianos y valores
+                        espirituales.</p>
+                    <div class="text-sm text-chocolate/60">
+                        <p>• Contenido bíblico</p>
+                        <p>• Temas espirituales</p>
+                        <p>• Para grupos cristianos</p>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-iniciar-juego"
+                class="bg-coral text-white px-8 py-3 rounded-lg hover:bg-coral/80 transition-colors font-semibold text-lg hidden">
+                🎮 Iniciar Juego
+            </button>
+        </div>
+
+        <!-- Pantalla del juego (inicialmente oculta) -->
+        <div id="pantalla-juego" class="hidden">
+            <!-- Selector de categoría -->
+            <div class="text-center mb-6">
+                <label for="categoria-select" class="text-chocolate font-semibold text-lg mr-4">Categoría:</label>
+                <select id="categoria-select" class="p-2 border-2 border-coral rounded-lg text-lg">
+                    <option value="general">General</option>
+                    <option value="cristiana">Cristiana</option>
+                </select>
+                <button id="btn-cambiar-categoria"
+                    class="ml-4 bg-peach text-white px-4 py-2 rounded-lg hover:bg-peach/80 transition font-semibold">
+                    Cambiar Categoría
+                </button>
+                <button id="btn-volver-seleccion"
+                    class="ml-4 bg-chocolate text-white px-4 py-2 rounded-lg hover:bg-chocolate/80 transition font-semibold">
+                    ← Volver a Selección
+                </button>
+            </div>
+
+            <!-- Temporizador -->
+            <div class="text-center mb-6">
+                <div class="inline-block bg-coral text-white px-6 py-3 rounded-lg font-bold text-xl">
+                    <span id="temporizador">05:00</span>
+                </div>
+            </div>
+
+            <!-- Rueda Alfabética Visual -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-center mb-4">Progreso de la Rueda</h3>
+                <div id="rueda-alfabetica" class="grid grid-cols-7 gap-2 max-w-2xl mx-auto">
+                    <!-- Las letras se generarán dinámicamente -->
+                </div>
+                <!-- Leyenda -->
+                <div class="flex justify-center items-center gap-4 mt-4 text-sm">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gray-200 border-2 border-gray-300 rounded"></div>
+                        <span>Pendiente</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-coral border-2 border-coral rounded animate-pulse"></div>
+                        <span>Actual</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-500 border-2 border-green-500 rounded"></div>
+                        <span>Correcta</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-red-500 border-2 border-red-500 rounded"></div>
+                        <span>Incorrecta</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded"></div>
+                        <span>Pasada</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor de la pregunta -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <h2 id="letra-actual" class="text-2xl font-bold mb-2">Letra: A</h2>
+                <p id="pregunta-texto" class="text-lg mb-4">Cargando pregunta...</p>
+                <input id="respuesta-input" type="text" placeholder="Tu respuesta"
+                    class="w-full border border-chocolate/30 rounded-lg p-2 mb-4" />
+                <div class="flex justify-between">
+                    <button id="btn-pasar"
+                        class="bg-peach text-white px-4 py-2 rounded-lg hover:bg-peach/80 transition">Pasar</button>
+                    <button id="btn-responder"
+                        class="bg-coral text-white px-4 py-2 rounded-lg hover:bg-coral/80 font-semibold transition">Responder</button>
+                </div>
+            </div>
+
+            <!-- Estado del juego -->
+            <div class="text-center mt-6 text-chocolate/70">
+                <p>Preguntas correctas: <span id="correctas">0</span> | Incorrectas: <span id="incorrectas">0</span></p>
+            </div>
+        </div>
+
+        <!-- Botón para volver al inicio -->
+        <div class="text-center mt-6">
+            <a href="/index.html"
+                class="inline-block bg-chocolate text-white px-4 py-2 rounded-lg hover:bg-chocolate/80 transition-colors font-semibold">
+                ← Volver al Inicio
+            </a>
+        </div>
+    </main>
+
+    <footer class="text-center p-6 text-chocolate/60 mt-12">
+        © 2025 Juegos Interactivos - Diseñado con ❤️
+    </footer>
+
+    <script type="module" src="/juegos/pasa-palabra/rueda-controller.js"></script>
+</body>
+
+</html>

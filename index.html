@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juegos Interactivos - Paleta Sunset Vibes</title>
+
+    <!-- Configuración centralizada de Tailwind CSS -->
+    <script type="module" src="/components/tailwind-config.js"></script>
+</head>
+
+<body class="min-h-screen text-chocolate font-sans">
+
+    <!-- Contenido principal -->
+    <main class="max-w-6xl mx-auto p-8">
+        <h2 class="text-4xl font-bold mb-8 text-center text-chocolate">🎮 Juegos Interactivos</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Juego de Memoria -->
+            <div
+                class="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-coral/20">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🧠</span>
+                    <h3 class="text-xl font-bold text-chocolate">Juego de Memoria</h3>
+                </div>
+                <p class="text-chocolate/80 mb-4">Encuentra las Parejas</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-coral rounded-full mr-2"></span>
+                        <span>Tipo: Visual, concentración</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Niveles con más tarjetas</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Temporizador y puntuación</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Imágenes temáticas</span>
+                    </div>
+                </div>
+                <a href="/juegos/memoria/memoria.html"
+                    class="w-full bg-coral text-white py-2 px-4 rounded-lg hover:bg-coral/80 transition-colors font-semibold inline-block text-center">
+                    Jugar Ahora
+                </a>
+            </div>
+
+            <!-- Quiz -->
+            <div
+                class=" rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-purple/20">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">❓</span>
+                    <h3 class="text-xl font-bold text-chocolate">Preguntas y Respuestas</h3>
+                </div>
+                <p class="text-chocolate/80 mb-4">Quiz de Conocimiento</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-coral rounded-full mr-2"></span>
+                        <span>Tipo: Conocimiento general</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Categorías temáticas</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Puntuación por rapidez</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Modo multijugador</span>
+                    </div>
+                </div>
+                <a href="/juegos/quiz/quiz.html"
+                    class="w-full bg-coral text-white py-2 px-4 rounded-lg hover:bg-coral/80 transition-colors font-semibold inline-block text-center">
+                    Jugar Ahora
+                </a>
+            </div>
+
+            <!-- Ahorcado -->
+            <div
+                class="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-coral/20">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🔤</span>
+                    <h3 class="text-xl font-bold text-chocolate">Ahorcado</h3>
+                </div>
+                <p class="text-chocolate/80 mb-4">Adivina la Palabra</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-coral rounded-full mr-2"></span>
+                        <span>Tipo: Vocabulario y lógica</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Categorías temáticas</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Contador de intentos</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Dificultad configurable</span>
+                    </div>
+                </div>
+                <a href="/juegos/ahorcado/ahorcado.html"
+                    class="w-full bg-coral text-white py-2 px-4 rounded-lg hover:bg-coral/80 transition-colors font-semibold inline-block text-center">
+                    Jugar Ahora
+                </a>
+            </div>
+
+            <!-- Charadas -->
+            <div
+                class="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-purple/20">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🎭</span>
+                    <h3 class="text-xl font-bold text-chocolate">Charadas</h3>
+                </div>
+                <p class="text-chocolate/80 mb-4">Juego en Grupo</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-coral rounded-full mr-2"></span>
+                        <span>Tipo: Juego presencial</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Temporizador incluido</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Modo por equipos</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Categorías personalizables</span>
+                    </div>
+                </div>
+                <a href="/juegos/charadas/charadas.html"
+                    class="w-full bg-coral text-white py-2 px-4 rounded-lg hover:bg-coral/80 transition-colors font-semibold inline-block text-center">
+                    Jugar Ahora
+                </a>
+            </div>
+
+            <!-- Rueda Alfabética -->
+            <div
+                class="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-coral/20">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🔠</span>
+                    <h3 class="text-xl font-bold text-chocolate">Rueda Alfabética</h3>
+                </div>
+                <p class="text-chocolate/80 mb-4">Estilo Pasapalabra</p>
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-coral rounded-full mr-2"></span>
+                        <span>Tipo: Conocimiento + letra</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Animación de rueda</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Opción de pasar</span>
+                    </div>
+                    <div class="flex items-center text-sm text-chocolate/70">
+                        <span class="w-2 h-2 bg-honey rounded-full mr-2"></span>
+                        <span>Estadísticas por ronda</span>
+                    </div>
+                </div>
+                <a href="/juegos/pasa-palabra/rueda.html"
+                    class="w-full bg-coral text-white py-2 px-4 rounded-lg hover:bg-coral/80 transition-colors font-semibold inline-block text-center">
+                    Jugar Ahora
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-pinksoft text-center p-6 text-chocolate/60 mt-12">
+        © 2025 Juegos Interactivos - Diseñado con ❤️
+    </footer>
+
+</body>
+
+</html>

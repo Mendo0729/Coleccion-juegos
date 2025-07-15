@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juego de Memoria - Juegos Interactivos</title>
+
+    <!-- Configuración centralizada de Tailwind CSS -->
+    <script type="module" src="/components/tailwind-config.js"></script>
+</head>
+
+<body class="min-h-screen text-chocolate font-sans">
+
+    <main class="max-w-4xl mx-auto p-6 mt-10">
+        <h1 class="text-3xl font-bold mb-6 text-center">🧠 Juego de Memoria</h1>
+
+        <!-- Pantalla de inicio -->
+        <div id="start-screen" class="text-center">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-chocolate mb-4">¡Bienvenido al Juego de Memoria!</h2>
+                <p class="text-chocolate/80 mb-6">
+                    Encuentra todas las parejas antes de que se acabe el tiempo.<br>
+                    Tienes 1 minuto y 30 segundos para completar el juego.
+                </p>
+                <button id="start-btn"
+                    class="bg-coral text-white px-8 py-3 rounded-lg hover:bg-coral/80 transition-colors font-semibold text-lg">
+                    🎮 Iniciar Juego
+                </button>
+            </div>
+        </div>
+
+        <!-- Pantalla de conteo regresivo -->
+        <div id="countdown-screen" class="text-center hidden">
+            <div class="text-8xl font-bold text-coral mb-4" id="countdown-number">3</div>
+            <p class="text-xl text-chocolate/80">¡Preparados!</p>
+        </div>
+
+        <!-- Pantalla del juego -->
+        <div id="game-screen" class="hidden">
+            <!-- Temporizador -->
+            <div class="text-center mb-6">
+                <div class="inline-block bg-coral text-white px-6 py-3 rounded-lg font-bold text-xl">
+                    <span id="timer">01:30</span>
+                </div>
+            </div>
+
+            <p class="text-center mb-8 text-chocolate/80">
+                Haz clic en las tarjetas para encontrar las parejas. ¡Pon a prueba tu memoria!
+            </p>
+
+            <!-- Tablero del juego -->
+            <section id="game-board" class="grid grid-cols-4 gap-4 justify-center">
+                <!-- Aquí se insertarán las tarjetas dinámicamente con JS -->
+            </section>
+
+            <!-- Botón reiniciar -->
+            <div class="text-center mt-8 space-x-4">
+                <button id="restart-btn"
+                    class="bg-coral text-white px-6 py-2 rounded-lg hover:bg-coral/80 transition-colors font-semibold">
+                    Reiniciar Juego
+                </button>
+                <a href="/index.html"
+                    class="inline-block bg-chocolate text-white px-6 py-2 rounded-lg hover:bg-chocolate/80 transition-colors font-semibold">
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/juegos/memoria/memoria-controller.js"></script>
+
+</body>
+
+</html>

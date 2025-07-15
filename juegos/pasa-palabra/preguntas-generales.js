@@ -1,0 +1,31 @@
+// Preguntas Generales para el Juego de Pasa-Palabra
+// Este archivo contiene preguntas de conocimiento general organizadas por letra
+
+export const preguntasGenerales = [
+    { letra: 'A', pregunta: 'Empieza con A: Ave que no vuela y vive en la Antártida.', respuesta: 'albatros' },
+    { letra: 'B', pregunta: 'Empieza con B: Parte del cuerpo que usamos para pensar.', respuesta: 'cerebro' },
+    { letra: 'C', pregunta: 'Empieza con C: Lugar donde viven muchos libros.', respuesta: 'biblioteca' },
+    { letra: 'D', pregunta: 'Empieza con D: Aparato que se usa para hablar a distancia.', respuesta: 'teléfono' },
+    { letra: 'E', pregunta: 'Empieza con E: Ciencia que estudia los seres vivos.', respuesta: 'ecología' },
+    { letra: 'F', pregunta: 'Empieza con F: Lo contrario de éxito.', respuesta: 'fracaso' },
+    { letra: 'G', pregunta: 'Empieza con G: Instrumento para medir peso.', respuesta: 'balanza' },
+    { letra: 'H', pregunta: 'Empieza con H: Elemento esencial para la vida.', respuesta: 'agua' },
+    { letra: 'I', pregunta: 'Empieza con I: Lo opuesto a inteligencia.', respuesta: 'ignorancia' },
+    { letra: 'J', pregunta: 'Empieza con J: Bebida preparada con frutas.', respuesta: 'jugo' },
+    { letra: 'K', pregunta: 'Empieza con K: Unidad de medida usada en informática (abreviatura).', respuesta: 'kilobyte' },
+    { letra: 'L', pregunta: 'Empieza con L: Lugar donde puedes dormir temporalmente.', respuesta: 'hotel' },
+    { letra: 'M', pregunta: 'Empieza con M: Satélite natural de la Tierra.', respuesta: 'luna' },
+    { letra: 'N', pregunta: 'Empieza con N: Lo opuesto a sí.', respuesta: 'no' },
+    { letra: 'O', pregunta: 'Empieza con O: Parte del cuerpo que usamos para ver.', respuesta: 'ojo' },
+    { letra: 'P', pregunta: 'Empieza con P: Fruto tropical amarillo por dentro.', respuesta: 'piña' },
+    { letra: 'Q', pregunta: 'Empieza con Q: Acción de interrogar.', respuesta: 'preguntar' },
+    { letra: 'R', pregunta: 'Empieza con R: Acción de correr rápido.', respuesta: 'correr' },
+    { letra: 'S', pregunta: 'Empieza con S: Temporada del año en la que florecen las plantas.', respuesta: 'primavera' },
+    { letra: 'T', pregunta: 'Empieza con T: Aparato que usamos para ver programas.', respuesta: 'televisión' },
+    { letra: 'U', pregunta: 'Empieza con U: Lugar donde estudian los adultos.', respuesta: 'universidad' },
+    { letra: 'V', pregunta: 'Empieza con V: Vehículo con dos ruedas.', respuesta: 'bicicleta' },
+    { letra: 'W', pregunta: 'Empieza con W: Navegador de internet muy conocido (inicial).', respuesta: 'windows' },
+    { letra: 'X', pregunta: 'Contiene la X: Tipo de radiación usada en medicina.', respuesta: 'rayos x' },
+    { letra: 'Y', pregunta: 'Empieza con Y: Letra poco usada en español.', respuesta: 'yema' },
+    { letra: 'Z', pregunta: 'Empieza con Z: Animal que parece un caballo con rayas.', respuesta: 'cebra' },
+]; 

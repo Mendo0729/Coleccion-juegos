@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charadas - Juegos Interactivos</title>
+
+    <!-- Configuración centralizada de Tailwind CSS -->
+    <script type="module" src="/components/tailwind-config.js"></script>
+</head>
+
+<body class="min-h-screen font-sans text-chocolate">
+
+    <main class="max-w-xl mx-auto p-6 mt-10 text-center bg-white rounded-xl shadow-lg">
+        <!-- Botón Volver al Inicio -->
+        <div class="text-left mb-6">
+            <a href="/index.html"
+                class="inline-block bg-chocolate text-white px-4 py-2 rounded-lg hover:bg-chocolate/80 transition-colors font-semibold">
+                ← Volver al Inicio
+            </a>
+        </div>
+
+        <h1 class="text-3xl font-bold mb-6">🎭 Juego de Charadas</h1>
+        <p class="mb-4 text-chocolate/80">Actúa, adivina y diviértete en grupo.</p>
+
+        <!-- Selección de categoría -->
+        <div class="mb-6">
+            <label for="categoria" class="block mb-2 font-semibold">Elige una categoría:</label>
+            <select id="categoria" class="p-2 rounded-lg border border-coral">
+                <option value="general">General</option>
+                <option value="animales">Animales</option>
+                <option value="oficios">Oficios</option>
+                <option value="objetos">Objetos</option>
+                <option value="cristiana">Cristiana</option>
+            </select>
+        </div>
+
+        <!-- Progreso y Puntuación -->
+        <div class="mb-6 flex justify-between items-center">
+            <div id="progreso" class="text-lg font-semibold text-coral">
+                <!-- Pregunta X de 10 -->
+            </div>
+            <div id="puntuacion" class="text-lg font-semibold text-green-600">
+                <!-- Puntuación: X/Y -->
+            </div>
+        </div>
+
+        <!-- Contenedor de la palabra -->
+        <div id="palabra-contenedor"
+            class="text-4xl font-bold mb-6 min-h-[3rem] p-4 bg-peach rounded-lg text-white tracking-wide">
+            <!-- Aquí va la palabra -->
+        </div>
+
+        <!-- Temporizador -->
+        <div id="temporizador" class="text-2xl font-semibold mb-6 text-coral">
+            <!-- Tiempo restante -->
+        </div>
+
+        <!-- Botones -->
+        <div class="space-x-4">
+            <button id="btn-empezar"
+                class="bg-coral text-white py-2 px-6 rounded-lg font-semibold hover:bg-coral/80 transition">
+                Empezar
+            </button>
+            <div id="btn-opciones" class="hidden space-x-4">
+                <button id="btn-correcto"
+                    class="bg-green-500 text-white py-2 px-6 rounded-lg font-semibold hover:bg-green-600 transition">
+                    ✅ Correcto
+                </button>
+                <button id="btn-incorrecto"
+                    class="bg-red-500 text-white py-2 px-6 rounded-lg font-semibold hover:bg-red-600 transition">
+                    ❌ Incorrecto
+                </button>
+            </div>
+            <button id="btn-reiniciar"
+                class="bg-chocolate text-white py-2 px-6 rounded-lg font-semibold hover:bg-chocolate/80 transition hidden">
+                Reiniciar
+            </button>
+        </div>
+
+    </main>
+
+    <script type="module" src="/juegos/charadas/charadas-controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahorcado - Juegos Interactivos</title>
+
+    <!-- Configuración centralizada de Tailwind CSS -->
+    <script type="module" src="/components/tailwind-config.js"></script>
+</head>
+
+<body class="min-h-screen text-chocolate font-sans bg-honey/20">
+
+    <main class="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
+        <!-- Botón Volver al Inicio -->
+        <div class="text-left mb-6">
+            <a href="/index.html"
+                class="inline-block bg-chocolate text-white px-4 py-2 rounded-lg hover:bg-chocolate/80 transition-colors font-semibold">
+                ← Volver al Inicio
+            </a>
+        </div>
+        
+        <h1 class="text-3xl font-bold text-center mb-4">🔤 Ahorcado</h1>
+        <p class="text-center text-chocolate/70 mb-6">Adivina la palabra antes de que se acaben los intentos</p>
+
+        <!-- Palabra a adivinar -->
+        <div id="word-display" class="text-3xl text-center tracking-widest font-mono mb-6">
+            _ _ _ _ _
+        </div>
+
+        <!-- Canvas para el ahorcado -->
+        <div class="flex justify-center mb-6">
+            <canvas id="hangman-canvas" width="300" height="300" class="border-2 border-chocolate/30 rounded-lg bg-white"></canvas>
+        </div>
+
+        <!-- Letras -->
+        <div id="letters-container" class="grid grid-cols-7 gap-2 justify-center mb-6">
+            <!-- Se generan dinámicamente -->
+        </div>
+
+        <!-- Intentos -->
+        <div class="text-center mb-4">
+            <p>Intentos restantes: <span id="attempts-left" class="font-bold">6</span></p>
+        </div>
+
+        <!-- Mensaje final -->
+        <div id="result-message" class="text-center text-xl font-semibold my-4 hidden"></div>
+
+        <!-- Botón reiniciar -->
+        <div class="text-center mt-6">
+            <button id="restart-btn"
+                class="bg-coral text-white px-6 py-2 rounded-lg hover:bg-coral/80 transition-colors font-semibold hidden">
+                Jugar otra vez
+            </button>
+        </div>
+    </main>
+
+    <footer class="text-center p-6 text-chocolate/60 mt-12">
+        © 2025 Juegos Interactivos - Diseñado con ❤️
+    </footer>
+
+    <script type="module" src="/juegos/ahorcado/ahorcado-controller.js"></script>
+</body>
+
+</html>
