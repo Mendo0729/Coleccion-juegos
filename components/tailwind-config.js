@@ -2,8 +2,8 @@
 // Este archivo contiene la configuración personalizada de colores y estilos
 // para ser reutilizada en todos los archivos HTML del proyecto
 
-// Función para configurar Tailwind
-function configureTailwind() {
+// Función para configurar los colores personalizados de Tailwind
+function configureTailwindColors() {
     if (window.tailwind) {
         window.tailwind.config = {
             theme: {
@@ -22,22 +22,23 @@ function configureTailwind() {
     }
 }
 
-// Verificar si Tailwind ya está cargado
+// Configurar colores cuando Tailwind esté disponible
 if (window.tailwind) {
-    configureTailwind();
+    configureTailwindColors();
 } else {
-    // Cargar Tailwind CSS desde CDN si no está presente
-    const tailwindScript = document.createElement('script');
-    tailwindScript.src = 'https://cdn.tailwindcss.com';
-    document.head.appendChild(tailwindScript);
-    
-    // Configurar Tailwind cuando se cargue
-    tailwindScript.onload = function() {
-        configureTailwind();
-    };
+    // Esperar a que Tailwind se cargue
+    document.addEventListener('DOMContentLoaded', function() {
+        // Verificar periódicamente si Tailwind está disponible
+        const checkTailwind = setInterval(() => {
+            if (window.tailwind) {
+                configureTailwindColors();
+                clearInterval(checkTailwind);
+            }
+        }, 100);
+    });
 }
 
-// Función para inicializar la configuración de Tailwind (para uso manual)
-export function initTailwindConfig() {
-    configureTailwind();
+// Función para inicializar la configuración de colores (para uso manual)
+export function initTailwindColors() {
+    configureTailwindColors();
 } 
