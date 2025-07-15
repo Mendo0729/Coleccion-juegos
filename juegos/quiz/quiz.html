@@ -9,7 +9,22 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configuración de colores personalizados -->
-    <script src="/components/tailwind-config.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peach: '#FF9A76',
+                        coral: '#FF6F61',
+                        honey: '#FFD56B',
+                        pinksoft: '#FFB6B9',
+                        lavender: '#D6A4A4',
+                        chocolate: '#6B4226',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="min-h-screen text-chocolate font-sans bg-honey/10">
