@@ -1,4 +1,4 @@
-const palabras = [
+/*const palabras = [
     'JUEGO',
     'PROGRAMAR',
     'AHORCADO',
@@ -9,6 +9,18 @@ const palabras = [
     'ANIMACION',
     'MEMORIA',
     'ALGORITMO',
+];*/
+const palabras = [
+  "Cielo, la pieza en el rompecabezas",
+  "Mi querido Shim",
+  "La fiesta de los trece",
+  "El hombre de los zapatos de charol",
+  "Solo imagina",
+  "Presta atencion y entenderas",
+  "Mama Grande",
+  "Los zapatos viejos",
+  "El inquilino",
+  "Aire que contamina"
 ];
 
 let palabraSecreta = '';

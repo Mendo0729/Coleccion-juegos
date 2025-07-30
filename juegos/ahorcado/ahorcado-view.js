@@ -6,7 +6,7 @@ export function renderizarLetras(onLetraClick) {
     const container = document.getElementById('letters-container');
     container.innerHTML = '';
 
-    const abecedario = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
+    const abecedario = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ,. '.split('');
 
     abecedario.forEach(letra => {
         const btn = document.createElement('button');
